@@ -58,4 +58,5 @@ def main():
         print("10 - Nikto (Web server vulnerability scanning)")
         print("11 - Hashcat (Advanced hash cracking using GPU)")
         print("12 - H4cker Toolkit (Collection of hacking resources)")
-        print("13 - LinEnum (Privilege enumeration
+        print("13 - LinEnum (Privilege enumeration on Linux)")
+
