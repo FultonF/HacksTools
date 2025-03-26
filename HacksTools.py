@@ -57,7 +57,7 @@ def install_tool(choice):
         os.system('git clone https://github.com/rebootuser/LinEnum.git')
         os.system('cd LinEnum && chmod +x LinEnum.sh && ./LinEnum.sh')
     elif choice == 10:
-        os.system('git clone https://github.com/bugcrowd/enum4linux.git')
+        os.system('git clone https://github.com/CiscoCXSecurity/enum4linux.git')
         os.system('cd enum4linux && python enum4linux.py')
     elif choice == 11:
         os.system('git clone https://github.com/sherlock-project/sherlock.git')
@@ -86,8 +86,8 @@ def install_tool(choice):
         os.system('git clone https://github.com/ALHacking/ALHacking.git')
         os.system('cd ALHacking && bash install.sh')
     elif choice == 20:
-        os.system('git clone https://github.com/ccoberg/IP-Tracker.git')
-        os.system('cd IP-Tracker && python3 tracker.py')
+        os.system('git clone https://github.com/htr-tech/track-ip.git')
+        os.system('cd IP-Tracker && bash track-ip')
     elif choice == 21:
         os.system('git clone https://github.com/rebootuser/LinEnum.git')
         os.system('cd LinEnum && chmod +x LinEnum.sh && ./LinEnum.sh')
