@@ -1,5 +1,9 @@
 import os
 import subprocess
+from colorama import Fore, Back, Style, init
+
+# Inicializar colorama
+init(autoreset=True)
 
 def print_tools():
     tools = [
@@ -54,8 +58,13 @@ def print_tools():
         "49 - Ghost Phisher (Wi-Fi Phishing & Attacks)",
         "50 - Snort (Intrusion Detection & Prevention)"
     ]
+    print(Fore.YELLOW + Style.BRIGHT + "\n====================== Hackstools ======================")
+    print(Fore.GREEN + Style.BRIGHT + "Welcome to the ultimate collection of hacking tools!")
+    print(Fore.CYAN + "Select a tool to install by entering the corresponding number:")
+    print(Fore.WHITE + "-"*60)
     for tool in tools:
-        print(tool)
+        print(Fore.MAGENTA + tool)
+    print(Fore.WHITE + "-"*60)
 
 def install_tool(tool_number):
     tool_links = {
@@ -113,25 +122,26 @@ def install_tool(tool_number):
 
     # Check if the input is valid
     if tool_number < 1 or tool_number > 50:
-        print("Invalid option.")
+        print(Fore.RED + "Invalid option. Please select a valid number between 1 and 50.")
         return
 
     tool_name = list(tool_links.keys())[tool_number - 1]
     tool_url = tool_links[tool_name]
 
     # Clone or download the repository from GitHub
-    print(f"Downloading tool: {tool_name}")
+    print(Fore.YELLOW + f"\nDownloading tool: {tool_name}")
     subprocess.run(["git", "clone", tool_url])
 
 def main():
-    print("Welcome to HacksTools!")
-    print("Select a tool to install by entering the corresponding number:")
+    print(Fore.YELLOW + Style.BRIGHT + "\n=================== Hackstools ====================")
+    print(Fore.RED + Style.BRIGHT + "Welcome to Hackstools - The Ultimate Hacking Toolkit!\n")
     print_tools()
-    
-    # Get the user's choice
-    tool_choice = int(input("Enter your choice: "))
-    
-    install_tool(tool_choice)
+
+    try:
+        tool_choice = int(input(Fore.GREEN + "Enter your choice (1-50): "))
+        install_tool(tool_choice)
+    except ValueError:
+        print(Fore.RED + "Please enter a valid number.")
 
 if __name__ == "__main__":
     main()
