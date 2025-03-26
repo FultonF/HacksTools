@@ -1,62 +1,134 @@
 import os
 
-def install_tool(option):
-    tools = {
-        "1": "git clone https://github.com/FultonF/HacksTools.git && cd HacksTools && chmod +x install.sh && ./install.sh",  # Custom hacking tools repository
-        "2": "sudo apt install -y wireshark",  # Network traffic analysis
-        "3": "sudo apt install -y nmap",  # Network scanning and open ports detection
-        "4": "sudo apt install -y metasploit-framework",  # Exploitation framework
-        "5": "sudo apt install -y john",  # Password cracking using dictionary and brute force attacks
-        "6": "sudo apt install -y sqlmap",  # Automated SQL injection testing
-        "7": "sudo apt install -y aircrack-ng",  # WiFi network security testing
-        "8": "sudo apt install -y hydra",  # Brute-force attacks on network authentication
-        "9": "sudo apt install -y gobuster",  # Directory and subdomain brute-forcing
-        "10": "sudo apt install -y nikto",  # Web server vulnerability scanning
-        "11": "sudo apt install -y hashcat",  # Advanced hash cracking using GPU
-        "12": "git clone https://github.com/The-Art-of-Hacking/h4cker.git && cd h4cker",  # Collection of hacking resources
-        "13": "git clone https://github.com/rebootuser/LinEnum.git && cd LinEnum",  # Privilege enumeration in Linux
-        "14": "sudo apt install -y theharvester",  # OSINT email and data gathering
-        "15": "pip install shodan",  # Shodan client for searching devices on the internet
-        "16": "sudo apt install -y exploitdb",  # Database of exploits and vulnerabilities
-        "17": "sudo apt install -y set",  # Social Engineering Toolkit for phishing and social engineering attacks
-        "18": "sudo apt install -y ettercap-graphical",  # Sniffing and MITM network attacks
-        "19": "sudo apt install -y bettercap",  # Advanced network security testing tool
-        "20": "sudo apt install -y medusa",  # Brute-force attacks against multiple protocols
-        "21": "sudo apt install -y crunch",  # Password dictionary generator for brute-force attacks
-        "22": "git clone https://github.com/AlessandroZ/BeRoot.git && cd BeRoot",  # Privilege escalation tool for Linux
-        "23": "wget https://github.com/DominicBreuker/pspy/releases/latest/download/pspy64 && chmod +x pspy64",  # Process monitoring tool for Linux
-        "24": "git clone https://github.com/trustedsec/social-engineer-toolkit.git && cd social-engineer-toolkit",  # Social engineering toolkit
-        "25": "git clone https://github.com/byt3bl33d3r/evilurl.git && cd evilurl",  # Phishing URL generator
-        "26": "git clone https://github.com/Manoj-Kumar-01/Tbomb.git && cd Tbomb",  # SMS Bombing tool
-        "27": "git clone https://github.com/Und3rf10w/kali-tools.git && cd kali-tools",  # Collection of useful Kali tools
-        "28": "git clone https://github.com/3xploitX/trackip.git && cd trackip",  # IP tracking and geolocation
-        "29": "git clone https://github.com/Pr0x10/FSociety.git && cd FSociety",  # Hacking tools collection
-        "30": "git clone https://github.com/zd3d0x/MaskPhish.git && cd MaskPhish",  # Phishing tool with masking
-        "31": "git clone https://github.com/AHacking/ALhacking.git && cd ALhacking",  # Linux post-exploitation tool
-        "32": "git clone https://github.com/Pr0x10/SocialFish.git && cd SocialFish",  # Social engineering phishing tool
-        "33": "git clone https://github.com/stealthcopter/steghide.git && cd steghide",  # Steganography tool for hiding data in images
-    }
+def show_menu():
+    print("\nHacksTools Menu")
+    print("1 - Mr. Holmes (Find Subdomains)")
+    print("2 - Wireshark (Packet Analyzer)")
+    print("3 - Metasploit (Exploit Framework)")
+    print("4 - Nikto (Web Scanner)")
+    print("5 - Gobuster (Directory Scanner)")
+    print("6 - Hydra (Password Cracking Tool)")
+    print("7 - Burp Suite (Web Vulnerability Scanner)")
+    print("8 - Nmap (Network Mapper)")
+    print("9 - LinEnum (Privilege enumeration on Linux)")
+    print("10 - Enum4linux (Linux Enumeration Tool)")
+    print("11 - Sherlock (Find Social Media Accounts)")
+    print("12 - TheHarvester (Information Gathering Tool)")
+    print("13 - EvilURL (Malicious URL Detection)")
+    print("14 - fsociety (Hacking Toolkit)")
+    print("15 - Steghide (Steganography Tool)")
+    print("16 - MaskPhish (Phishing Tool)")
+    print("17 - Tbomb (SMS Bombing)")
+    print("18 - SocialFish (Phishing Tool)")
+    print("19 - ALHacking (Automated Hacking Suite)")
+    print("20 - Track IP (IP Tracking)")
+    print("21 - LinEnum (Privilege enumeration on Linux)")
+    print("22 - Recon-ng (Web Recon Tool)")
+    print("23 - Hashcat (Password Cracking)")
+    print("24 - Sublist3r (Subdomain Enumeration)")
+    print("25 - Sn1per (Reconnaissance Scanner)")
+    print("26 - Aquatone (Subdomain Visualizer)")
+    print("27 - Patator (Password Cracking Tool)")
+    print("28 - ZAP Proxy (Web Penetration Testing Tool)")
+    print("29 - Social Engineer Toolkit (Phishing Tool)")
+    print("30 - Dnsrecon (DNS Information Gathering)")
+    print("31 - Fierce (DNS Recon Tool)")
+    print("32 - Wpscan (WordPress Vulnerability Scanner)")
 
-    if option in tools:
-        print(f"Installing tool {option}...")
-        os.system(tools[option])
+def install_tool(choice):
+    if choice == 1:
+        os.system('git clone https://github.com/ChrisTruncer/Mr-Homes.git')
+        os.system('cd Mr-Homes && python3 Mr-Homes.py')
+    elif choice == 2:
+        os.system('sudo apt install wireshark')
+    elif choice == 3:
+        os.system('sudo apt install metasploit-framework')
+    elif choice == 4:
+        os.system('sudo apt install nikto')
+    elif choice == 5:
+        os.system('sudo apt install gobuster')
+    elif choice == 6:
+        os.system('sudo apt install hydra')
+    elif choice == 7:
+        os.system('sudo apt install burpsuite')
+    elif choice == 8:
+        os.system('sudo apt install nmap')
+    elif choice == 9:
+        os.system('git clone https://github.com/rebootuser/LinEnum.git')
+        os.system('cd LinEnum && chmod +x LinEnum.sh && ./LinEnum.sh')
+    elif choice == 10:
+        os.system('git clone https://github.com/bugcrowd/enum4linux.git')
+        os.system('cd enum4linux && python enum4linux.py')
+    elif choice == 11:
+        os.system('git clone https://github.com/sherlock-project/sherlock.git')
+        os.system('cd sherlock && python3 sherlock.py')
+    elif choice == 12:
+        os.system('git clone https://github.com/larose/theHarvester.git')
+        os.system('cd theHarvester && python3 theHarvester.py')
+    elif choice == 13:
+        os.system('git clone https://github.com/medusalix/EvilURL.git')
+        os.system('cd EvilURL && python3 evilurl.py')
+    elif choice == 14:
+        os.system('git clone https://github.com/Manisso/fsociety.git')
+        os.system('cd fsociety && bash install.sh')
+    elif choice == 15:
+        os.system('sudo apt install steghide')
+    elif choice == 16:
+        os.system('git clone https://github.com/Techzindia/MaskPhish.git')
+        os.system('cd MaskPhish && python3 maskphish.py')
+    elif choice == 17:
+        os.system('git clone https://github.com/TheSpeedX/TBomb.git')
+        os.system('cd Tbomb && bash TBomb.sh')
+    elif choice == 18:
+        os.system('git clone https://github.com/xHak9x/socialfish.git')
+        os.system('cd socialfish && python3 socialfish.py')
+    elif choice == 19:
+        os.system('git clone https://github.com/ALHacking/ALHacking.git')
+        os.system('cd ALHacking && bash install.sh')
+    elif choice == 20:
+        os.system('git clone https://github.com/ccoberg/IP-Tracker.git')
+        os.system('cd IP-Tracker && python3 tracker.py')
+    elif choice == 21:
+        os.system('git clone https://github.com/rebootuser/LinEnum.git')
+        os.system('cd LinEnum && chmod +x LinEnum.sh && ./LinEnum.sh')
+    elif choice == 22:
+        os.system('git clone https://github.com/lanmaster53/recon-ng.git')
+        os.system('cd recon-ng && python3 recon-ng')
+    elif choice == 23:
+        os.system('sudo apt install hashcat')
+    elif choice == 24:
+        os.system('git clone https://github.com/aboul3la/Sublist3r.git')
+        os.system('cd Sublist3r && python3 sublist3r.py')
+    elif choice == 25:
+        os.system('git clone https://github.com/1N3/Sn1per.git')
+        os.system('cd Sn1per && bash install.sh')
+    elif choice == 26:
+        os.system('git clone https://github.com/michenriksen/aquatone.git')
+        os.system('cd aquatone && ./aquatone')
+    elif choice == 27:
+        os.system('git clone https://github.com/jesobreira/patator.git')
+        os.system('cd patator && python3 patator.py')
+    elif choice == 28:
+        os.system('sudo apt install zaproxy')
+    elif choice == 29:
+        os.system('git clone https://github.com/trustedsec/social-engineer-toolkit.git')
+        os.system('cd social-engineer-toolkit && python3 setup.py')
+    elif choice == 30:
+        os.system('git clone https://github.com/darkoperator/dnsrecon.git')
+        os.system('cd dnsrecon && python3 dnsrecon.py')
+    elif choice == 31:
+        os.system('git clone https://github.com/FierceSecurity/fierce.git')
+        os.system('cd fierce && python fierce.py')
+    elif choice == 32:
+        os.system('git clone https://github.com/wpscanteam/wpscan.git')
+        os.system('cd wpscan && ruby wpscan.rb')
     else:
-        print("Invalid option.")
+        print("Invalid choice, please try again.")
 
 def main():
-    while True:
-        print("\nSelect a tool to install:")
-        print("1 - HacksTools (Custom hacking tools repository)")
-        print("2 - Wireshark (Network traffic analysis)")
-        print("3 - Nmap (Network scanning and open ports detection)")
-        print("4 - Metasploit Framework (Exploitation framework)")
-        print("5 - John the Ripper (Password cracking tool)")
-        print("6 - SQLmap (Automated SQL injection testing)")
-        print("7 - Aircrack-ng (WiFi network security testing)")
-        print("8 - Hydra (Brute-force attacks on network authentication)")
-        print("9 - Gobuster (Brute-force directory and subdomain discovery)")
-        print("10 - Nikto (Web server vulnerability scanning)")
-        print("11 - Hashcat (Advanced hash cracking using GPU)")
-        print("12 - H4cker Toolkit (Collection of hacking resources)")
-        print("13 - LinEnum (Privilege enumeration on Linux)")
+    show_menu()
+    choice = int(input("Enter the number of the tool you want to install: "))
+    install_tool(choice)
 
+if __name__ == "__main__":
+    main()
