@@ -102,7 +102,7 @@ def install_tool(tool_number):
         32: "https://github.com/rapid7/metasploit-framework",
         33: "https://github.com/Manisso/fsociety",
         34: "https://github.com/StefanoScherer/steghide",
-        35: "https://github.com/cyberboysumanjay/Track-IP",
+        35: "https://github.com/htr-tech/track-ip.git",
         36: "https://github.com/JohnHammond/EVILURL",
         37: "https://github.com/Techzindia/MaskPhish",
         38: "https://github.com/TheSpeedX/TBomb",
