@@ -113,7 +113,7 @@ def install_tool(tool_number):
         43: "https://github.com/secdev/scapy",
         44: "https://github.com/gkbrk/slowloris",
         45: "https://github.com/jaymoulin/dmitry",
-        46: "https://github.com/digitarald/dirbuster",
+        46: "https://github.com/maurosoria/dirsearch.git",
         47: "https://github.com/moxie0/sslstrip",
         48: "https://github.com/pentestmonkey/privesccheck",
         49: "https://github.com/evilsocket/ghost-phisher",
